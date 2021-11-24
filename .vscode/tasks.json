@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"${file}",
+				"-IC:\\Program Files\\SFML\\include",
+				"-LC:\\Program Files\\SFML\\lib",
+				"-lsfml-graphics", "-lsfml-window", "-lsfml-audio", "-lsfml-network", "-lsfml-system",
+				// No need here, add dlls in exe directory
+				//"C:\\Program Files\\SFML\\bin\\sfml-audio-2.dll",
+				//"C:\\Program Files\\SFML\\bin\\sfml-graphics-2.dll",
+				//"C:\\Program Files\\SFML\\bin\\sfml-network-2.dll",
+				//"C:\\Program Files\\SFML\\bin\\sfml-system-2.dll",
+				//"C:\\Program Files\\SFML\\bin\\sfml-window-2.dll",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe", "-Ofast"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: \"C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe\""
+		}
+	]
+}
